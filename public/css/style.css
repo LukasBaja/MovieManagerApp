@@ -1,0 +1,565 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #121212,
+    #1e1e1e
+  ); /* Gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+#title {
+  font-size: 24px; /* Larger font size for emphasis */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align the title */
+  margin: 20px 0; /* Spacing above and below */
+  color: #ffc107; /* Yellow color for emphasis */
+  text-transform: uppercase; /* Uppercase text */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+}
+
+#container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Subtle gradient */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Softer shadow */
+  border: 2px solid #ffc107; /* Yellow border for emphasis */
+  animation: fadein 1s ease-in-out; /* Fade-in effect */
+}
+#directorList {
+  width: 100%; /* Match table width */
+
+  border-collapse: collapse; /* Match table style */
+  margin: 30px 0; /* Increased spacing */
+  font-size: 18px; /* Larger font size */
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+  border: 2px solid #555; /* Slightly thicker border */
+  border-radius: 12px; /* More rounded corners */
+  overflow: hidden; /* Match overflow style */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Slightly larger shadow */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+#directorTableTitle {
+  font-size: 20px; /* Slightly smaller than main title */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Center align the title */
+  margin: 15px 0; /* Spacing above and below */
+  color: #ffc107; /* Yellow color for emphasis */
+  text-transform: uppercase; /* Uppercase text */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+}
+
+#directorListTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+  border: 1px solid #555; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Softer shadow */
+}
+
+#directorList th,
+#directorList td {
+  padding: 12px 15px; /* Match padding */
+  border-bottom: 1px solid #555; /* Subtle row separator */
+}
+
+#directorList th {
+  background: linear-gradient(135deg, #444, #555); /* Gradient for header */
+  color: #ffc107; /* Yellow text for header */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#directorList tr:nth-child(even) {
+  background: linear-gradient(
+    135deg,
+    #2a2a2a,
+    #1e1e1e
+  ); /* Alternate row color */
+}
+
+#directorList tr:hover {
+  background: linear-gradient(
+    135deg,
+    #ffc107,
+    #ffca28
+  ); /* Highlight on hover */
+  color: #121212; /* Dark text for contrast */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.8);
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba(255, 193, 7, 1);
+  }
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Increased spacing between buttons */
+  margin: 25px 0;
+}
+
+button {
+  padding: 12px 25px; /* Slightly larger buttons */
+  font-size: 16px;
+  border: none;
+  border-radius: 8px; /* More rounded corners */
+  cursor: pointer;
+  background: linear-gradient(135deg, #444, #555); /* Gradient for buttons */
+  color: #e0e0e0; /* Light text for contrast */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(
+    135deg,
+    #ffc107,
+    #ffca28
+  ); /* Gradient yellow on hover */
+  transform: scale(1.08); /* Slightly larger hover effect */
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.5); /* Glow effect */
+}
+
+#deletebtn {
+  padding: 12px 25px; /* Matching padding */
+  font-size: 16px; /* Matching font size */
+  border: none;
+  border-radius: 8px; /* Matching rounded corners */
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    #ff070b,
+    #ff4d4f
+  ); /* Red gradient background */
+  color: #ffffff; /* White text for contrast */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#deletebtn:hover {
+  background: linear-gradient(
+    135deg,
+    #ff4d4f,
+    #ff070b
+  ); /* Inverted red gradient on hover */
+  transform: scale(1.08); /* Slightly larger hover effect */
+  box-shadow: 0 4px 8px rgba(255, 7, 11, 0.5); /* Glow effect */
+}
+
+#confirmDelete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+  padding: 30px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+  z-index: 2000;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+#confirmDelete h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ffc107; /* Yellow text for emphasis */
+}
+
+#confirmDelete button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#confirmDelete #yesbtn {
+  background: linear-gradient(135deg, #28a745, #34d058); /* Green gradient */
+  color: #ffffff; /* White text */
+}
+
+#confirmDelete #yesbtn:hover {
+  background: linear-gradient(
+    135deg,
+    #218838,
+    #28a745
+  ); /* Darker green on hover */
+  transform: scale(1.08);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.5); /* Glow effect */
+}
+
+#confirmDelete #nobtn {
+  background: linear-gradient(135deg, #dc3545, #ff6b6b); /* Red gradient */
+  color: #ffffff; /* White text */
+}
+
+#confirmDelete #nobtn:hover {
+  background: linear-gradient(
+    135deg,
+    #c82333,
+    #dc3545
+  ); /* Darker red on hover */
+  transform: scale(1.08);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.5); /* Glow effect */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased spacing between form elements */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #555; /* Slightly lighter border */
+  border-radius: 8px; /* More rounded corners */
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Gradient for inputs */
+  color: #e0e0e0; /* Light text */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #ffc107; /* Yellow border on focus */
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.8); /* Glow effect */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+  max-height: 240px; /* Limit height for better UX */
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 12px 25px; /* Larger labels */
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #444, #555); /* Gradient for labels */
+  color: #e0e0e0;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+label:hover {
+  background: linear-gradient(
+    135deg,
+    #ffc107,
+    #ffca28
+  ); /* Gradient yellow on hover */
+  transform: scale(1.08);
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.5); /* Glow effect */
+}
+
+input[type="checkbox"]:checked + label {
+  background: linear-gradient(
+    135deg,
+    #28a745,
+    #34d058
+  ); /* Gradient green for checked state */
+  border-color: #218838;
+}
+
+#checkboxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased spacing between checkboxes */
+}
+
+#checkboxContainer label {
+  display: flex;
+  align-items: center;
+}
+
+#checkboxContainer input {
+  margin: 0;
+}
+
+button[type="submit"] {
+  background: linear-gradient(
+    135deg,
+    #444,
+    #555
+  ); /* Gradient for submit button */
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(
+    135deg,
+    #ffc107,
+    #ffca28
+  ); /* Gradient yellow on hover */
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield; /* Standard property for compatibility */
+  -moz-appearance: textfield; /* Remove arrows in Firefox */
+}
+
+/* Custom select arrow styling */
+select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Remove default arrow for WebKit browsers */
+  -moz-appearance: none; /* Remove default arrow for Firefox */
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+  border: 1px solid #555; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 35px 12px 12px; /* Add space for the arrow */
+  font-size: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffc107'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Position the arrow */
+  background-size: 16px 16px; /* Size of the arrow */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #ffc107; /* Yellow border on focus */
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.8); /* Glow effect */
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2328a745'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Change arrow color on focus */
+}
+
+/* Custom Date Picker Styles with Emoji */
+input[type="date"] {
+  position: relative;
+  padding: 14px;
+  font-size: 18px;
+  border: 1px solid #555; /* Match the subtle border color */
+  border-radius: 8px;
+  background-color: #1e1e1e; /* Match the gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: Arial, sans-serif; /* Match the font family */
+  appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffc107'%3E%3Ctext x='2' y='20' font-size='20'%3E📆%3C/text%3E%3C/svg%3E")
+    no-repeat;
+  background-size: 20px;
+  border: none;
+  opacity: 0.7;
+}
+
+input[type="date"]:focus {
+  border-color: #ffc107; /* Match the yellow border on focus */
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.8); /* Match the glow effect */
+  outline: none;
+  animation: glow 1.5s infinite alternate;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Table Styles */
+table#movieList {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Gradient background */
+  color: #e0e0e0; /* Light text for contrast */
+  border: 1px solid #555; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Softer shadow */
+}
+
+table#movieList th,
+table#movieList td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #555; /* Subtle row separator */
+}
+table td:nth-child(1) {
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+table td:nth-child(2) {
+  word-break: break-all;
+  word-spacing: normal; /* Allow breaking long words */
+}
+
+table td:nth-child(3) {
+  text-align: center; /* Center align the rating column */
+}
+
+table#movieList th {
+  background: linear-gradient(135deg, #444, #555); /* Gradient for header */
+  color: #ffc107; /* Yellow text for header */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table#movieList tr:nth-child(even) {
+  background: linear-gradient(
+    135deg,
+    #2a2a2a,
+    #1e1e1e
+  ); /* Alternate row color */
+}
+
+table#movieList tr:hover {
+  background: linear-gradient(
+    135deg,
+    #ffc107,
+    #ffca28
+  ); /* Highlight on hover */
+  color: #121212; /* Dark text for contrast */
+}
+
+table#movieList td span {
+  display: inline-block;
+  padding: 5px 10px;
+  background: linear-gradient(135deg, #444, #555); /* Gradient for genre tags */
+  color: #e0e0e0; /* Light text */
+  border-radius: 4px; /* Rounded corners for tags */
+  font-size: 14px;
+  margin: 2px; /* Spacing between tags */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+table#movieList td span:hover {
+  background: linear-gradient(
+    135deg,
+    #ff070b,
+    #ff070b
+  ); /* Highlight tags on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Success Message Styles */
+/* Add your styles here */
+
+.success-message {
+  background: linear-gradient(135deg, #28a745, #34d058); /* Gradient green */
+  color: #ffffff; /* White text for contrast */
+  padding: 15px 20px; /* Larger padding for better spacing */
+  border: none; /* Remove border */
+  border-radius: 8px; /* More rounded corners */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  font-size: 16px; /* Slightly larger font */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.success-message::before {
+  content: "✔"; /* Success icon */
+  font-size: 20px;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #dc3545, #ff6b6b); /* Gradient red */
+  color: #ffffff; /* White text for contrast */
+  padding: 15px 20px; /* Larger padding for better spacing */
+  border: none; /* Remove border */
+  border-radius: 8px; /* More rounded corners */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  font-size: 16px; /* Slightly larger font */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.error-message::before {
+  content: "✖"; /* Error icon */
+  font-size: 20px;
+}
