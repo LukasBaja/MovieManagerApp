@@ -99,7 +99,7 @@ The **Movie Manager App** is a web application that allows users to manage movie
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+ISC
 
 ## Contact
 
